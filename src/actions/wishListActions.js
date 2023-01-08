@@ -5,7 +5,9 @@ import {
 import axios from "axios";
 
 export const addToWishList = (id) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/products/${id}`);
+  const { data } = await axios.get(
+    `https://shopzee-mern-app-m7zr.onrender.com/api/products/${id}`
+  );
   dispatch({
     type: ADD_TO_WISHLIST,
     payload: {

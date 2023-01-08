@@ -35,7 +35,11 @@ export const createOrder = (order) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`/api/orders`, order, config);
+    const { data } = await axios.post(
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders`,
+      order,
+      config
+    );
 
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: data });
   } catch (error) {
@@ -64,7 +68,10 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/orders/${id}`, config);
+    const { data } = await axios.get(
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders/${id}`,
+      config
+    );
     console.log(data);
 
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
@@ -95,7 +102,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `/api/orders/${id}/pay`,
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders/${id}/pay`,
       paymentResult,
       config
     );
@@ -127,7 +134,11 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
       },
     };
 
-    await axios.put(`/api/orders/${order._id}/deliver`, {}, config);
+    await axios.put(
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders/${order._id}/deliver`,
+      {},
+      config
+    );
 
     dispatch({ type: ORDER_DELIVER_SUCCESS });
   } catch (error) {
@@ -156,7 +167,10 @@ export const OrdersList = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/orders/myorders`, config);
+    const { data } = await axios.get(
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders/myorders`,
+      config
+    );
 
     dispatch({ type: MY_ORDERS_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -185,7 +199,10 @@ export const getAllOrders = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/orders`, config);
+    const { data } = await axios.get(
+      `https://shopzee-mern-app-m7zr.onrender.com/api/orders`,
+      config
+    );
 
     dispatch({ type: ORDERS_LIST_SUCCESS, payload: data });
   } catch (error) {
