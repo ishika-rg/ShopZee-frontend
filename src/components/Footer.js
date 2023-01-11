@@ -19,10 +19,10 @@ const Footer = () => {
             <ListGroup variant="flush">
               <ListGroupItem>
                 <h4>SHOPZEE</h4>
-                <p>
+                {/* <p>
                   Pellentesque habitant morbi tristique senectus et netus et
                   malesuada fames ac turpis egestas..
-                </p>
+                </p> */}
               </ListGroupItem>
               <ListGroupItem>
                 <strong>E :</strong> hello@cbox2.com

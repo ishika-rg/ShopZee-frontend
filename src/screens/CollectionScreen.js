@@ -149,7 +149,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `0-100`}
                   value={`0-100`}
-                  label={`$0-$100`}
+                  label={`Rs. 0-Rs. 100`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value
@@ -162,7 +162,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `100-200`}
                   value={`100-200`}
-                  label={`$100-$200`}
+                  label={`Rs. 100-Rs. 200`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value
@@ -175,7 +175,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `200-400`}
                   value={`200-400`}
-                  label={`$200-$400`}
+                  label={`Rs. 200-Rs. 400`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value
@@ -188,7 +188,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `300-500`}
                   value={`300-500`}
-                  label={`$300-$500`}
+                  label={`Rs. 300-Rs. 500`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value
@@ -201,7 +201,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `500-1000`}
                   value={`500-1000`}
-                  label={`$500-$1000`}
+                  label={`Rs. 500-Rs. 1000`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value
@@ -214,7 +214,7 @@ const CollectionScreen = () => {
                   type="checkbox"
                   checked={price === `1000-30000`}
                   value={`1000-30000`}
-                  label={`$1000+`}
+                  label={`Rs. 1000+`}
                   onChange={(e) =>
                     setPrice((current) =>
                       current === e.target.value ? null : e.target.value

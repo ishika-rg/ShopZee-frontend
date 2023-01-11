@@ -4,25 +4,25 @@ import Rating from "./Rating";
 
 const authorsList = [
   {
-    name: "Kelly Shah",
-    designation: "graphic designer",
+    name: "Pragati Rawat",
+    designation: "COT Student",
     rating: 5,
     description:
-      "Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more!",
+      "I love shopping on Shopzee! They have such a wide variety of products and affordable prices. ",
   },
   {
-    name: "Vinod Kumar",
-    designation: "Marketing Personal",
-    rating: 5,
+    name: "Mansi Bisht",
+    designation: "COF Student",
+    rating: 4,
     description:
-      "Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more!",
+      "Shopzee is best and most reliable e commerce site. Free shipping with ShopZee is also really handy! ",
   },
   {
-    name: "Lakshay Kumar",
-    designation: "Frontend Developer",
-    rating: 5,
+    name: "Gaurav Saini",
+    designation: "COT Student",
+    rating: 4.5,
     description:
-      "Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Sunmi is worth much more!",
+      "Very comfortable and easy to use site, good range of products with best efficienct ! Free shipping with ShopZee is also really handy!",
   },
 ];
 
@@ -32,18 +32,21 @@ const Testimonials = () => {
       <h3 style={{ fontWeight: 700, marginBottom: "25px" }}>Testimonials</h3>
       {authorsList.map((author, i) => (
         <Col key={i} sm={12} md={4}>
-          <Card>
+          <Card style = {{ height : '15rem'}}>
             <Card.Body>
               <div className="d-flex align-items-center gap-2">
-                <img
+                <div>  <i className="fa-solid fa-user-pen"></i></div>
+
+             
+                {/* <img
                   width="60"
                   height="60"
                   data-src="//cdn.shopify.com/s/files/1/0159/9193/0928/files/Untit.png?v=1575435476"
                   alt="testimonial"
                   src="//cdn.shopify.com/s/files/1/0159/9193/0928/files/Untit.png?v=1575435476"
-                />
+                /> */}
                 <div className="author-info">
-                  <h5>{author.name}</h5>
+                  <p className = 'mb-0'>{author.name}</p>
                   <p>{author.designation}</p>
                 </div>
               </div>

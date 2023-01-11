@@ -117,7 +117,7 @@ const CartScreen = () => {
                   {cartItems.reduce((acc, item) => acc + Number(item.qty), 0)})
                   items
                 </h2>
-                $
+                Rs. 
                 {cartItems
                   .reduce(
                     (acc, item) => acc + Number(item.qty) * Number(item.price),

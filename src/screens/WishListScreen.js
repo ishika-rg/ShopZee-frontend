@@ -32,7 +32,7 @@ const WishListScreen = () => {
         <Modal.Title>WishList</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {wishListItems.length == 0 ? (
+        {wishListItems.length === 0 ? (
           <Message>No items in the wishlist.</Message>
         ) : (
           <ListGroup variant="flush">

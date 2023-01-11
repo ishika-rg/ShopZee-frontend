@@ -53,7 +53,7 @@ const OrderSummary = () => {
               <Col sm={8}>
                 <Link to={`/product/${item.product}`}>{item.name}</Link>
               </Col>
-              <Col sm={2}>${item.price}</Col>
+              <Col sm={2}>Rs. {item.price}</Col>
             </Row>
           </ListGroupItem>
         ))}
@@ -65,18 +65,18 @@ const OrderSummary = () => {
             {cart.cartItems.reduce((acc, item) => acc + Number(item.qty), 0)})
             items
           </h5>
-          ${cart.itemsPrice}
+          Rs. {cart.itemsPrice}
         </ListGroupItem>
         <ListGroupItem>
-          <h5>Shipping Price</h5>${cart.shippingPrice}
+          <h5>Shipping Price</h5>Rs. {cart.shippingPrice}
         </ListGroupItem>
         <ListGroupItem>
-          <h5>Tax Price</h5>${cart.taxPrice}
+          <h5>Tax Price</h5>Rs. {cart.taxPrice}
         </ListGroupItem>
       </ListGroup>
       <ListGroup>
         <ListGroupItem>
-          <h5>Total Price</h5>${cart.totalPrice}
+          <h5>Total Price</h5>Rs. {cart.totalPrice}
         </ListGroupItem>
       </ListGroup>
     </FormContainer>
